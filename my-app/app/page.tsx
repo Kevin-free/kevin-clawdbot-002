@@ -33,7 +33,7 @@ interface Player {
 
 export default function FlyingGame() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | null>(null);
   const [gameState, setGameState] = useState<'start' | 'playing' | 'gameOver'>('start');
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
